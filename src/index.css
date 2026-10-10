@@ -1,0 +1,343 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #f3efe6;
+  --surface: #fffcf7;
+  --surface-muted: #efeae0;
+  --line: #e4dccf;
+  --ink: #1c1915;
+  --muted: #6e655c;
+  --faint: #8d847a;
+  --accent: #0f5e58;
+  --accent-ink: #f4fffd;
+  --accent-soft: #e5f3f1;
+  --income: #0f5e58;
+  --expense: #b5523a;
+  --danger: #9d3f2c;
+  --danger-ink: #fff8f6;
+  --shadow: 0 1px 2px rgba(28, 25, 21, 0.04), 0 16px 40px rgba(28, 25, 21, 0.05);
+  --chart-grid: #e4dccf;
+  --chart-axis: #6e655c;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #101412;
+  --surface: #1a211e;
+  --surface-muted: #24302b;
+  --line: #33423b;
+  --ink: #f6f3ec;
+  --muted: #c1b6aa;
+  --faint: #9a9086;
+  --accent: #8fd9cf;
+  --accent-ink: #10211f;
+  --accent-soft: #1b3330;
+  --income: #8fd9cf;
+  --expense: #f0a894;
+  --danger: #e7a08c;
+  --danger-ink: #2a1210;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.28), 0 16px 40px rgba(0, 0, 0, 0.28);
+  --chart-grid: #33423b;
+  --chart-axis: #c1b6aa;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(900px 420px at 0% -10%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.display {
+  font-family: Fraunces, Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.money {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.5rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.925rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn-ghost {
+  border-color: var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--surface-muted);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: var(--danger-ink);
+}
+
+.btn-danger:hover {
+  filter: brightness(1.06);
+}
+
+.btn-quiet {
+  min-height: 2.25rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.btn-quiet:hover {
+  background: var(--surface-muted);
+  color: var(--ink);
+}
+
+.icon-btn {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--ink);
+}
+
+.icon-btn:hover {
+  background: var(--surface-muted);
+}
+
+.field {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 0.7rem 0.85rem;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.field::placeholder {
+  color: var(--faint);
+}
+
+.field-amount {
+  padding-left: 1.75rem;
+  font-size: 1.25rem;
+}
+
+.field-search {
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+.select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.15rem) 55%,
+    calc(100% - 0.75rem) 55%;
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.2rem;
+}
+
+.field-error {
+  margin-top: 0.35rem;
+  color: var(--expense);
+  font-size: 0.8125rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  padding: 0.4rem 0.8rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.nav-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 0.9rem;
+  padding: 0.7rem 0.8rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background: var(--surface-muted);
+  color: var(--ink);
+}
+
+.nav-item[aria-current='page'] {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.visually-hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.chart-tip {
+  min-width: 10.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  padding: 0.7rem 0.8rem;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.toast-slot {
+  position: fixed;
+  z-index: 70;
+  left: 50%;
+  bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  pointer-events: none;
+}
+
+.toast {
+  border-radius: 999px;
+  background: var(--ink);
+  padding: 0.7rem 1rem;
+  color: var(--bg);
+  font-size: 0.925rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 768px) {
+  .toast-slot {
+    bottom: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
