@@ -2,7 +2,7 @@ export const site = {
   name: "Jacob Binala",
   role: "Web Developer & IT Specialist",
   tagline:
-    "Bridging the gap between robust IT infrastructure and modern, user-centred web experiences.",
+    "Web developer and IT specialist learning to blend technology and usability through hands-on experience.",
   nav: [
     { label: "Work", href: "#work" },
     { label: "Experience", href: "#experience" },
@@ -75,6 +75,24 @@ export type Project = {
 export const projects = {
   title: "Work",
   items: [
+    {
+      title: "Harbor — Personal Budget Tracker",
+      year: "2026",
+      href: "https://harborbudgettracker.vercel.app/",
+      hrefLabel: "Live demo",
+      bullets: [
+        "Built a local-first budget tracker with React, Vite, and Recharts, no backend, all data persists in the browser",
+        "Dashboard with income, expenses, and net savings, category donut chart, and six-month cashflow visualization",
+        "Full transaction management with search, filters, custom categories, month navigation, and dark mode",
+      ],
+      images: [
+        {
+          src: "/images/dashboard.png",
+          alt: "Harbor dashboard",
+        },
+      ],
+    },
+    
     {
       title: "Ride-N-Go Transport Website",
       year: "2025",

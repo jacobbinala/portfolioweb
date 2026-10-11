@@ -13,9 +13,9 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Jacob Mbinala — Front-End Developer",
+  title: "Jacob binala — Developer",
   description:
-    "Portfolio and résumé of Jacob Mbinala — web developer focused on accessible, user-centred front-end experiences.",
+    "Portfolio and résumé of Jacob binala — web developer focused on accessible, user-centred front-end experiences.",
 };
 
 export default function RootLayout({

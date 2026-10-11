@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jacob Binala — Personal Portfolio
 
-## Getting Started
+Welcome to the source code for my personal portfolio website!  
+Here, you’ll find my latest work in web development, IT support, and graphic design. This project not only showcases my skills and experience, but it’s also a playground where I experiment with modern web technologies and UI/UX principles.
 
-First, run the development server:
+## 🌐 Live Site
+
+Visit my portfolio at: [https://your-deployed-portfolio-url.com](https://your-deployed-portfolio-url.com)  
+📄 [Download Resume (PDF)](/resume.pdf)
+
+---
+
+## 🚀 Features
+
+- **Modern Stack**: Built with [Next.js](https://nextjs.org), Typescript, Tailwind CSS, and React.
+- **Responsive & Accessible**: Mobile-friendly design, semantic HTML, and basic accessibility practices.
+- **Dynamic Projects Gallery**: Showcases select projects with interactive image carousels.
+- **Skills, Experience & Education**: Clearly organized sections for easy browsing.
+- **Dark Mode**: Supports dark/light themes for reading comfort.
+- **Performance-Focused**: Optimized images, fonts, and loading strategies.
+
+---
+
+## 🛠️ Installation & Local Development
+
+Clone this repository and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/your-portfolio.git
+cd your-portfolio
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Customization
 
-## Learn More
+- **Content**:  
+  Update your personal info, projects, skills, and more in [`lib/content.ts`](lib/content.ts).
 
-To learn more about Next.js, take a look at the following resources:
+- **Images**:  
+  Place new project images and graphics in [`public/images/`](public/images/).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Resume**:  
+  Replace [`public/resume.pdf`](public/resume.pdf) with your latest CV.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧑‍💻 Main Technologies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Next.js](https://nextjs.org/)  
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vercel](https://vercel.com/) (for deployment)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📦 Deployment
+
+Deploy hassle-free with [Vercel](https://vercel.com/):
+
+1. Push your repo to GitHub.
+2. Connect your repo on [vercel.com/new](https://vercel.com/new).
+3. Configure environment variables if needed, and deploy!
+
+---
+
+## 📄 License
+
+[MIT](LICENSE)
+
+---
+
+## 🙋‍♂️ About Me
+
+I'm Jacob Binala, passionate about crafting digital experiences—from websites to design and IT support solutions.  
+Connect with me on [LinkedIn](https://www.linkedin.com/in/your-linkedin) or check out my full design portfolio [here](https://jacobmbinala.myportfolio.com/).
+
+---
+
+> Inspired by simplicity, accessibility, and the beauty of functional design.
